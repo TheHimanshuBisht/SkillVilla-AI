@@ -348,3 +348,8 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+a.nav-item {
+  display: block;
+  text-decoration: none;
+}

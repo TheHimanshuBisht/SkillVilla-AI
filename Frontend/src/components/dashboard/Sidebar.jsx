@@ -1,12 +1,14 @@
+import { NavLink } from "react-router-dom";
+
 function Sidebar({ onLogout }) {
   return (
     <aside className="sidebar">
       <h2>SkillVilla</h2>
       <nav>
-        <div className="nav-item active">Dashboard</div>
-        <div className="nav-item">My Learning</div>
-        <div className="nav-item">Progress</div>
-        <div className="nav-item">Settings</div>
+        <NavLink to="/dashboard" className="nav-item">Dashboard</NavLink>
+        <NavLink to="/my-learning" className="nav-item">My Learning</NavLink>
+        <NavLink to="/progress" className="nav-item">Progress</NavLink>
+        <NavLink to="/settings" className="nav-item">Settings</NavLink>
       </nav>
       <button className="logout-btn" onClick={onLogout}>
         Logout
