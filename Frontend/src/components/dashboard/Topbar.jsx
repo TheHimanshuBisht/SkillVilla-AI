@@ -12,7 +12,10 @@ function Topbar({ user }) {
 
   return (
     <header className="topbar">
-      <span className="topbar-title">{titles[pathname] || "SkillVilla"}</span>
+     <span className="topbar-title">
+    {titles[pathname] ||
+    (pathname.startsWith("/courses/") ? "Course Details" : "SkillVilla")}
+      </span>
       <div className="topbar-user">
         <span>{user.name}</span>
         <div className="avatar">{user.name.charAt(0).toUpperCase()}</div>

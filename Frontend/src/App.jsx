@@ -7,6 +7,7 @@ import Progress from "./pages/Progress";
 import Settings from "./pages/Settings";
 import ProtectedRoute from "./components/ProtectedRoute";
 import DashboardLayout from "./components/dashboard/DashboardLayout";
+import CourseDetails from "./pages/CourseDetails";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <Route path="/" element={<Navigate to="/signup" />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />
-
+      <Route path="/courses/:id" element={<CourseDetails />} />
       <Route
         element={
           <ProtectedRoute>
